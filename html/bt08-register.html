@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 8 - Đăng ký form</title>
+</head>
+<body>
+    <h3 align="center">BÀI KIỂM TRA CHƯƠNG 2</h3>
+    <p align="center">
+        <b>Môn học:</b><i> Mạng máy tính</i><br>
+        <b>Mã số sinh viên:</b><i> 2451052277</i><br>
+        <b>Họ và tên:</b><i> Ngô Nhật Tuấn</i><br>
+    </p>
+    <hr width="100%" color="blue" size="3"/>
+    <p align="center">
+        <a href="bt08-index.html">Trang chủ</a>
+        <a href="bt08-content.html">Nội dung môn học</a>
+        <a href="bt08-register.html">Đăng ký</a>
+    </p>
+    <h2 align="center">Đăng ký tham gia diễn đàn</h2>
+    <form>
+        <table align="center" bgcolor="#ffff00" border="1">
+            <tr>
+                <td><label for="username">Tên đăng nhập:</label></td>
+                <td><input type="text" name="username" id="username" placeholder="Nhập tên đăng nhập"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Mật khẩu:</label></td>
+                <td><input type="password" name="password" id="password" required></td>
+            </tr>
+            <tr>
+                <td>Giới tính:</td>
+                <td>
+                    <input type="radio" name="gender" value="male" checked>Nam
+                    <input type="radio" name="gender" value="female">Nữ
+                </td>
+            </tr>
+            <tr>
+                <td><label for="birthday">Ngày sinh:</label></td>
+                <td><input type="date" name="birthday" id="birthday" required></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" name="email" id="email" required></td>
+            </tr>
+            <tr>
+                <td>Ngôn ngữ lập trình yêu thích:</td>
+                <td>
+                    <input list="Options"><br>
+                    <datalist id="Options">
+                        <option value="C++">
+                        <option value="C#">
+                        <option value="PHP">
+                        <option value="Java">
+                        <option value="Python">
+
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>Quy định khi tham gia diễn đàn:</td>
+                <td><textarea rows="5" cols="30">Bài viết phải nghiêm túc, không chứa quảng cáo, không có nội dung phản cảm</textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Đăng ký" style="padding: 5px 15px; background-color: blue; color: aliceblue; font-weight: bold;">
+                    <input type="reset" value="Hủy" style="padding: 5px 15px; background-color: blue; color: aliceblue; font-weight: bold;">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
