@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.promo {
+    background-image: url(../images/phonebgrd.jpg);
+    background-size: 100%;
+    opacity: 0.5;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 3px 3px 2px black;
+    color: yellow;
+}
+.description {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 20px;
+    justify-content: center;
+}
+.feature {
+    flex: 1 1 200px; /*flex grow, flex-shrink, flex-basis*/
+    border: 1px solid#ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+.action {
+    background-color: #28a745;
+    color: white;
+    padding: 100px;
+    text-align: center;
+    height: 160px;
+    font-size: 2em;
+}
+.action button {
+    padding: 15px 30px;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: #abe7f5;
+}
+h1 {
+    font-size: 2.5em;
+    text-shadow: 5px 5px 3px gray;
+}

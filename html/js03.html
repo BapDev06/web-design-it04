@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Statistic() {
+            var s = document.getElementById("txtS").value; 
+            var arr = s.split(" "); //tach de dem so tu
+            var i, words = 0; 
+            var arrKq = []; //mang chua ket qua
+            for (i = 0; i <= 128; i++) {
+                arrKq[i] = 0; 
+            }
+            //dem so tu
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] . trim() != "")
+                    words++; 
+            }
+            var kq = "Characters: " + s.length + "<br>" + 
+                    "Words: " + words + "<br>"; 
+            for (i = 0; i < s.length; i++) {
+                if (s[i] >= 'a' && s[i] <= 'z') // a-z
+                    arrKq[s.charCodeAt(i) - 32]++; 
+                else 
+                    arrKq[s.charCodeAt(i)]++;
+            }
+            //Duyet mang arrKQ in so lieu thong ke
+            for (i = 0; i < arrKq.length; i++) {
+                if (arrKq[i] > 0)
+                    kq += "Character " + String.fromCharCode (i) + " : " + arrKq[i] + "<br>";
+            }
+            document.getElementById("kq").innerHTML = kq; 
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <caption><h3>String Statistic</h3></caption>
+        <tr>
+            <td>String:</td>
+            <td><input type="text" id="txtS" size="50" value="Hello, how are you? 1123"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="Statistic()">Statistic</button></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><p id="kq"></p></td>
+        </tr>
+    </table>
+</body>
+</html>
