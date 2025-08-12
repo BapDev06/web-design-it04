@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            width: 50%;
+            margin: 0px auto;
+        }
+    </style>
+    <script>
+        function Dangky(){
+            var ten = document.forms.reg["txtTen"].value; 
+            var mk = document.forms.reg["txtPass"].value; 
+            var ns = document.forms.reg["txtNgaySinh"].value; 
+            //checkDate(d); 
+            var gt = document.forms.reg["gt"].value; 
+            var qt = document.forms.reg["qt"].value; 
+            document.forms.reg["Thongtin"].value = "Chào mừng " + ten + 
+            "\nBạn là " + gt + "\nMật khẩu của bạn có " + mk.length + " kí tự, " + 
+            "bạn sinh ngày " + ns + "\nVấn đề bạn quan tâm là: " + qt; 
+            return false; 
+        }
+
+        /*function checkDate(d) {
+            if (d == NULL) {
+                alert("invalid"); 
+                return false; 
+            }
+        }*/
+    </script>
+</head>
+<body>
+    <form id="reg" onsubmit="return Dangky()">
+        <h1>ĐĂNG KÝ THÀNH VIÊN</h1>
+        <p>
+            <label>Tên đăng nhập</label>
+            <input type="text" name="txtTen" required>
+        </p>
+        <p>
+            <label>Mật khẩu</label>
+            <input type="password" name="txtPass" required>
+        </p>
+        <p>
+            <label>Ngày sinh</label>
+            <input type="date" name="txtNgaySinh" required>
+        </p>
+        <p>
+            <label>Giới tính</label>
+            <input type="radio" name="gt" value="Nam" checked>Nam
+            <input type="radio" name="gt" value="Nu">Nữ
+
+        </p>
+
+        <p>
+            <label>Vấn đề bạn quan tâm</label>
+            <select name="qt">
+                <option value="Kinh tế">Kinh tế</option>
+                <option value="Thể thao">Thể thao</option>
+                <option value="Văn học nghệ thuật">Văn học nghệ thuật</option>
+            </select>
+        </p>
+        <p>
+            <input type="submit" value="Đăng Ký">
+            <input type="reset" value="Hủy">
+        </p>
+        <p>
+            <textarea name="Thongtin" rows="6" cols="50"></textarea>
+        </p>
+    </form>
+</body>
+</html>
